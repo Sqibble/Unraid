@@ -19,10 +19,10 @@ For that :&#xD;
 - copy/paste "chown 1001:1000 /path/to/appdata" into the terminal, and hit enter</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8001]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/RedisInsight/RedisInsight-template.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/RedisInsight/RedisInsight-icon.png</Icon>
-  <Screenshot>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/RedisInsight/RedisInsight-screenshot1.jpg</Screenshot>
-  <Screenshot>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/RedisInsight/RedisInsight-screenshot2.jpg</Screenshot>
+  <TemplateURL>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-templates/RedisInsight/RedisInsight-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-templates/RedisInsight/RedisInsight-icon.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-templates/RedisInsight/RedisInsight-screenshot1.jpg</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-templates/RedisInsight/RedisInsight-screenshot2.jpg</Screenshot>
   <Config Name="Web UI Port" Target="8001" Default="8001" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8001</Config>
   <Config Name="Data Dir" Target="/db" Default="/mnt/user/appdata/RedisInsight/data" Mode="rw" Description="RedisInsight persistent data location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/RedisInsight/data</Config>
   <Config Name="Log Level" Target="RILOGLEVEL" Default="WARNING" Mode="" Description="Configures the log level of the application. Possible values are - DEBUG, INFO, WARNING, ERROR and CRITICAL." Type="Variable" Display="always" Required="false" Mask="false">WARNING</Config>
