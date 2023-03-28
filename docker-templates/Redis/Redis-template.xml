@@ -7,14 +7,13 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Project>https://redis.io/</Project>
-  <Overview>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.&#xD;
+  <Overview>***Redis*** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.&#xD;
 &#xD;
-This is a template for the bitnami/redis container, with persistence and the environment variables for password protection.&#xD;
-For a detailed description of the container and other available environment variables, visit https://hub.docker.com/r/bitnami/redis/ .&#xD;
+This is a template for the **bitnami/redis** container, with persistence and the environment variables for password protection. For a detailed description of the container and other available environment variables, visit https://hub.docker.com/r/bitnami/redis/ .&#xD;
 &#xD;
-Redis requires it's directories to be owned by 1001:1000.&#xD;
-For that :&#xD;
-- open an Unraid terminal and execute the following commands (without the quotes and replace /path/to/config and /path/to/data with the paths you define for Config and Data below respectively)&#xD;
+***Redis*** requires it's directories to be owned by 1001:1000 (or at least for that user to have read / write permissions).&#xD;
+Assuming the directories used, will only be used by this container :&#xD;
+- open an Unraid terminal and execute the following commands (without the quotes and replace /path/to/config and /path/to/data with the paths you define for **Config Dir** and **Data Dir** below respectively)&#xD;
 - (if the directory doesn't exist yet) copy/paste "mkdir /path/to/config" into the terminal, and hit enter&#xD;
 - copy/paste "chown 1001:1000 /path/to/config" into the terminal, and hit enter&#xD;
 - (if the directory doesn't exist yet) copy/paste "mkdir /path/to/data" into the terminal, and hit enter&#xD;
