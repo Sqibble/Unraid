@@ -7,14 +7,13 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Project>https://redis.com/redis-enterprise/redis-insight/</Project>
-  <Overview>RedisInsight - The GUI for Redis.&#xD;
+  <Overview>***RedisInsight*** - The GUI for Redis.&#xD;
 &#xD;
-A template for the redislabs/redisinsight container, with the environment variables available at the time of writing (28-03-2023), as described at :&#xD;
-https://docs.redis.com/latest/ri/installing/configurations/&#xD;
+This is a template for the **redislabs/redisinsight** container, with all the environment variables available at the time of writing (28-03-2023), as described at : https://docs.redis.com/latest/ri/installing/configurations/&#xD;
 &#xD;
-RedisInsight requires it's directories to be owned by 1001:1000.&#xD;
-For that :&#xD;
-- open an Unraid terminal and execute the following commands (without the quotes and replace /path/to/appdata with the path you define for Appdata below)&#xD;
+***RedisInsight*** requires it's directories to be owned by 1001:1000 (or at least for that user to have read / write permissions).&#xD;
+Assuming the directories used, will only be used by this container :&#xD;
+- open an Unraid terminal and execute the following commands (without the quotes and replace /path/to/appdata with the path you define for **Data Dir** below)&#xD;
 - (if the directory doesn't exist yet) copy/paste "mkdir /path/to/appdata" into the terminal, and hit enter&#xD;
 - copy/paste "chown 1001:1000 /path/to/appdata" into the terminal, and hit enter</Overview>
   <Category>Tools:Utilities</Category>
