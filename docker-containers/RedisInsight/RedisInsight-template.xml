@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RedisInsight</Name>
+  <Repository>redislabs/redisinsight:latest</Repository>
+  <Registry>https://hub.docker.com/r/redislabs/redisinsight</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://redis.com/redis-enterprise/redis-insight/</Project>
+  <Overview>RedisInsight - The GUI for Redis.&#xD;
+&#xD;
+A template for the redislabs/redisinsight container, with the environment variables available at the time of writing (28-03-2023), as described at :&#xD;
+https://docs.redis.com/latest/ri/installing/configurations/&#xD;
+&#xD;
+RedisInsight requires it's directories to be owned by 1001:1000.&#xD;
+For that :&#xD;
+- open an Unraid terminal and execute the following commands (without the quotes and replace /path/to/appdata with the path you define for Appdata below)&#xD;
+- (if the directory doesn't exist yet) copy/paste "mkdir /path/to/appdata" into the terminal, and hit enter&#xD;
+- copy/paste "chown 1001:1000 /path/to/appdata" into the terminal, and hit enter</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8001]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/RedisInsight/RedisInsight-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/RedisInsight/RedisInsight-icon.png</Icon>
+  <Config Name="Web UI Port" Target="8001" Default="8001" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">8001</Config>
+  <Config Name="Data Dir" Target="/db" Default="/mnt/user/appdata/RedisInsight/data" Mode="rw" Description="RedisInsight persistent data location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/RedisInsight/data</Config>
+  <Config Name="Log Level" Target="RILOGLEVEL" Default="WARNING" Mode="" Description="Configures the log level of the application. Possible values are - DEBUG, INFO, WARNING, ERROR and CRITICAL." Type="Variable" Display="always" Required="false" Mask="false">WARNING</Config>
+  <Config Name="Application Listen Port" Target="RIPORT" Default="8001" Mode="" Description="Which port should RedisInsight listen on." Type="Variable" Display="advanced" Required="false" Mask="false">8001</Config>
+  <Config Name="Application Listen Host" Target="RIHOST" Default="0.0.0.0" Mode="" Description="Which host should RedisInsight bind to." Type="Variable" Display="advanced" Required="false" Mask="false">0.0.0.0</Config>
+  <Config Name="Application Home Dir" Target="RIHOMEDIR" Default="/db" Mode="" Description="Sets the storage directory where RedisInsight stores application data (such as local database, log files and snapshot files)." Type="Variable" Display="advanced" Required="false" Mask="false">/db</Config>
+  <Config Name="Application Log Dir" Target="RILOGDIR" Default="/db" Mode="" Description="Sets the logging storage directory where RedisInsight stores application logs." Type="Variable" Display="advanced" Required="false" Mask="false">/db</Config>
+  <Config Name="Trusted Origins" Target="RITRUSTEDORIGINS" Default="" Mode="" Description="Configures the trusted origins of the application. Examples: https://my-website.com,https://my-another-website.com,http://my-third-website.com" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Subpath Proxy" Target="RIPROXYENABLE" Default="true|false" Mode="" Description="Enables Subpath Proxy for the application." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Subpath Proxy Path" Target="RIPROXYPATH" Default="" Mode="" Description="Configures Subpath Proxy path for the application. Examples: /redisinsight, /myapp" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Subpath Proxy Prefix" Target="RIPROXYPREFIX" Default="X-Forwarded-Prefix" Mode="" Description="Sets the Subpath proxy prefix HTTP header field name for the application. The application uses the value from this HTTP header key as proxy subpath. Examples: X-Forwarded-Prefix, X-Forwarded-Path" Type="Variable" Display="advanced" Required="false" Mask="false">X-Forwarded-Prefix</Config>
+  <Config Name="Authentication Prompt" Target="RIAUTHPROMPT" Default="true|false" Mode="" Description="Enables authentication prompt that asks for authentication before opening an instance or when the user is idle." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Idle Timer" Target="RIAUTHTIMER" Default="30" Mode="" Description="Idle timer value for authentication prompt, in minutes." Type="Variable" Display="advanced" Required="false" Mask="false">30</Config>
+</Container>
