@@ -20,8 +20,8 @@ For that :&#xD;
 - (if the directory doesn't exist yet) copy/paste "mkdir /path/to/data" into the terminal, and hit enter&#xD;
 - copy/paste "chown 1001:1000 /path/to/data" into the terminal, and hit enter</Overview>
   <Category>Tools:Utilities</Category>
-  <TemplateURL>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/Redis/Redis-template.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-containers/Redis/Redis-icon.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-templates/Redis/Redis-template.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Sqibble/Unraid/main/docker-templates/Redis/Redis-icon.png</Icon>
   <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">6379</Config>
   <Config Name="Config Dir" Target="/opt/bitnami/redis/mounted-etc" Default="/mnt/user/appdata/Redis/config" Mode="rw" Description="Redis persistent config location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Redis/config</Config>
   <Config Name="Data Dir" Target="/bitnami/redis/data" Default="/mnt/user/appdata/Redis/data" Mode="rw" Description="Redis persistent data location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Redis/data</Config>
